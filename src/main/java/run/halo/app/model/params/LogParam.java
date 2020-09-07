@@ -1,7 +1,6 @@
 package run.halo.app.model.params;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import run.halo.app.model.dto.base.InputConverter;
@@ -30,4 +29,12 @@ public class LogParam implements InputConverter<Log> {
     @NotBlank(message = "Log content must not be blank")
     @Size(max = 1023, message = "Log content must not be more than 1023")
     private String content;
+
+    private String ipAddress;
+
+    public LogParam(String logKey, LogType type, String content) {
+        this.logKey = logKey;
+        this.type = type;
+        this.content = content;
+    }
 }

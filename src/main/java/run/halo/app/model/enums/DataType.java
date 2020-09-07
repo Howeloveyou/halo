@@ -23,16 +23,10 @@ public enum DataType implements ValueEnum<Integer> {
 
     BOOL(3);
 
-    private Integer value;
+    private final Integer value;
 
     DataType(Integer value) {
         this.value = value;
-    }
-
-
-    @Override
-    public Integer getValue() {
-        return value;
     }
 
     /**
@@ -51,6 +45,11 @@ public enum DataType implements ValueEnum<Integer> {
         }
 
         return STRING;
+    }
+
+    @Override
+    public Integer getValue() {
+        return value;
     }
 
     /**

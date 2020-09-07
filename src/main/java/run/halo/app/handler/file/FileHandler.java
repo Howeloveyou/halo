@@ -16,38 +16,11 @@ import static run.halo.app.model.support.HaloConst.FILE_SEPARATOR;
  * File handler interface.
  *
  * @author johnniang
- * @date 3/27/19
+ * @date 2019-03-27
  */
 public interface FileHandler {
 
     MediaType IMAGE_TYPE = MediaType.valueOf("image/*");
-
-    /**
-     * Uploads file.
-     *
-     * @param file multipart file must not be null
-     * @return upload result
-     * @throws FileOperationException throws when fail to upload the file
-     */
-    @NonNull
-    UploadResult upload(@NonNull MultipartFile file);
-
-    /**
-     * Deletes file.
-     *
-     * @param key file key must not be null
-     * @throws FileOperationException throws when fail to delete the file
-     */
-    void delete(@NonNull String key);
-
-    /**
-     * Checks if the given type is supported.
-     *
-     * @param type attachment type
-     * @return true if supported; false or else
-     */
-    boolean supportType(@Nullable AttachmentType type);
-
 
     /**
      * Check whether media type provided is an image type.
@@ -58,7 +31,6 @@ public interface FileHandler {
     static boolean isImageType(@Nullable String mediaType) {
         return mediaType != null && IMAGE_TYPE.includes(MediaType.valueOf(mediaType));
     }
-
 
     /**
      * Check whether media type provided is an image type.
@@ -82,4 +54,29 @@ public interface FileHandler {
 
         return StringUtils.appendIfMissing(dir, FILE_SEPARATOR);
     }
+
+    /**
+     * Uploads file.
+     *
+     * @param file multipart file must not be null
+     * @return upload result
+     * @throws FileOperationException throws when fail to upload the file
+     */
+    @NonNull
+    UploadResult upload(@NonNull MultipartFile file);
+
+    /**
+     * Deletes file.
+     *
+     * @param key file key must not be null
+     * @throws FileOperationException throws when fail to delete the file
+     */
+    void delete(@NonNull String key);
+
+    /**
+     * Get attachment type is supported.
+     *
+     * @return attachment type
+     */
+    AttachmentType getAttachmentType();
 }

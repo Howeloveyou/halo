@@ -1,102 +1,112 @@
 <h1 align="center"><a href="https://github.com/halo-dev" target="_blank">Halo</a></h1>
 
-> Halo 可能是最好的 Java 博客系统。
+> Halo 是一款现代化的个人独立博客系统，给习惯写博客的同学多一个选择。
 
 <p align="center">
-<a href="https://ryanc.cc"><img alt="Author" src="https://img.shields.io/badge/author-ruibaby-red.svg?style=flat-square"/></a>
-<a href="#"><img alt="JDK" src="https://img.shields.io/badge/JDK-1.8-yellow.svg?style=flat-square"/></a>
 <a href="https://github.com/halo-dev/halo/releases"><img alt="GitHub release" src="https://img.shields.io/github/release/halo-dev/halo.svg?style=flat-square"/></a>
+<a href="https://github.com/halo-dev/halo/releases"><img alt="GitHub All Releases" src="https://img.shields.io/github/downloads/halo-dev/halo/total.svg?style=flat-square"></a>
+<a href="https://hub.docker.com/r/ruibaby/halo"><img alt="Docker pulls" src="https://img.shields.io/docker/pulls/ruibaby/halo?style=flat-square"></a>
+<a href="https://github.com/halo-dev/halo/commits"><img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/halo-dev/halo.svg?style=flat-square"></a>
 <a href="https://travis-ci.org/halo-dev/halo"><img alt="Travis CI" src="https://img.shields.io/travis/halo-dev/halo.svg?style=flat-square"/></a>
-<a href="https://hub.docker.com/r/halo-dev/halo/"><img alt="Docker Build Status" src="https://img.shields.io/docker/build/halo-dev/halo.svg?style=flat-square"/></a>
 </p>
 
 ------------------------------
 
-## 新版本说明
-
-**老版本已不提供维护，请不要再使用老版本进行部署了，当前分支为新版本，正在内测中，将于近期发布版本**
-
 ## 简介
 
-**Halo** [ˈheɪloʊ]，意为光环。当然，你也可以当成拼音读(哈喽)。
+**Halo** `[ˈheɪloʊ]`，意为光环。当然，你也可以当成拼音读(哈喽)。
 
-轻快，简洁，功能强大，使用 Java 开发的博客系统。
+一个优秀的开源博客发布应用，值得一试。
 
-> QQ 交流群: 162747721 | Telegram 交流群：[https://t.me/HaloBlog](https://t.me/HaloBlog) | Telegram 频道：[https://t.me/halo_dev](https://t.me/halo_dev) | [WeHalo 小程序](https://github.com/aquanlerou/WeHalo)。
+> [官网 & 文档](https://halo.run) | [社区](https://bbs.halo.run) | [Telegram 频道](https://t.me/halo_dev)
+
+## 声明
+
+> 本项目旨在创造一个好的产品以供人们使用（虽然现在并不是太好），并非一个所谓提供学习的项目。所以，不提供任何学习代码的帮助。也请不要在讨论群，issues，论坛发起任何有关代码学习的问题。当然，如果你是要参与代码贡献，我们非常欢迎。
+
+另外，写给想自己拉代码编译运行的同学：
+
+> 目前我们的开发分支即 master，肯定会有很多小问题，不要运行不起来就跑过来吐槽什么代码开源不完整之类的，多找找自己的原因。同时建议下载最新 release 版本的代码，或者在 master 分支执行 `git checkout v1.3.2`。
+
+PS：实在不想写这个声明（影响 README 的美观），但是就目前来看，写在 README 上是有必要的，因为大部分遇到问题的人都不会去仔细阅读文档。
 
 ## 快速开始
 
-老版本下载地址：[https://github.com/halo-dev/halo/releases/tag/v0.4.4](https://github.com/halo-dev/halo/releases/tag/v0.4.4)
+### 下载最新的 Halo 安装包
 
-新版本正在内测中。
+> 其他地址：https://halo.run/archives/download.html
+
+```bash
+curl -L https://github.com/halo-dev/halo/releases/download/v1.3.2/halo-1.3.2.jar --output halo-latest.jar
+```
+
+或者
+
+```bash
+wget https://github.com/halo-dev/halo/releases/download/v1.3.2/halo-1.3.2.jar -O halo-latest.jar
+```
+
+### 启动 Halo
+
+```bash
+java -jar halo-latest.jar
+```
+
+详细部署文档请移步：<https://halo.run/archives/install-quick-start.html>
 
 ## 博客示例
 
-[Ryan0up'S Blog](https://ryanc.cc)
+请移步： <https://halo.run/p/user-wall.html>。
 
-[SNAIL BLOG](https://slogc.cc)
+## 周边
 
-[宋浩志博客](http://songhaozhi.com)
-
-[KingYiFan'S Blog](https://blog.cnbuilder.cn)
-
-[AquanBlog](https://blog.eunji.cn/)
-
-## 主题
-
-除了内置的 [Anatole](https://github.com/hi-caicai/farbox-theme-Anatole) 和 [Material](https://github.com/viosey/hexo-theme-material) ，还有下列主题没有集成在项目里，如有需要，请自行下载之后通过后台上传上去使用。
-
-- [Vno](https://github.com/halo-dev/vno-halo) - 来自 Jekyll 的一款主题，作者 [Wei Wang](https://onevcat.com/)。
-- [Hux](https://github.com/halo-dev/hux-halo) - 来自 Jekyll 的一款主题，作者 [Xuan Huang](https://huangxuan.me/)。
-- [Story](https://github.com/halo-dev/story-halo) - 来自 Typecho 的一款主题，作者 [Trii Hsia](https://yumoe.com/)。
-- [NexT](https://github.com/halo-dev/next-halo) - 来自 Hexo 的一款主题，作者 [iissnan](https://notes.iissnan.com/)。
-- [Casper](https://github.com/halo-dev/casper-halo) - 来自 Ghost 的一款主题，作者 [Ghost](https://github.com/TryGhost)。
-- [Pinghsu](https://github.com/halo-dev/pinghsu-halo) - 来自 Typecho 的一款主题，作者 [Chakhsu.Lau](https://github.com/chakhsu)。
-
-> 声明：不接受任何对**移植主题**功能上的意见和建议。
+- 后台管理（halo-admin）：<https://github.com/halo-dev/halo-admin>
+- 独立评论模块（halo-comment）：<https://github.com/halo-dev/halo-comment>
+- 管理 APP（已停止维护）：<https://github.com/halo-dev/halo-app>
+- 主题仓库：<https://halo.run/p/themes.html>
+- 资源下载：<https://dl.halo.run>
+- WeHalo 小程序：<https://github.com/aquanlerou/WeHalo>
 
 ## 许可证
 
 [![license](https://img.shields.io/github/license/halo-dev/halo.svg?style=flat-square)](https://github.com/halo-dev/halo/blob/master/LICENSE)
 
-> Halo 使用 GPL-v3.0 协议开源，请尽量遵守开源协议，即便是在中国。
+> Halo 使用 GPL-v3.0 协议开源，请尽量遵守开源协议。
+
+## 贡献
+参考 [CONTRIBUTING](./CONTRIBUTING.md)。
 
 ## 捐赠
 
-> 如果 Halo 对你有帮助，可以请作者喝杯☕️。
+> 如果 Halo 对你有帮助，可以请开发团队们喝杯☕️。
 
-| 支付宝/微信/QQ  |
-| :------------: |
-| <img src="https://i.loli.net/2018/12/23/5c1f68ce9b884.png" width="200"/>  |
+- 一次性赞助：<https://sponsor.halo.run>
+- 周期性赞助：<https://afdian.net/@halo-dev>
 
 ## 预览图
 
-![anatole.png](https://i.loli.net/2019/05/08/5cd2fc3e478dc.png)
+![theme-anatole.png](https://i.loli.net/2019/09/11/OQtKEWcCe8xYBph.png)
 
-![casper.png](https://i.loli.net/2019/05/08/5cd2fc3e4e587.png)
+![theme-icarus.png](https://i.loli.net/2019/09/11/4lO2wNCLiqyIJmR.png)
 
-![material.png](https://i.loli.net/2019/05/08/5cd2fc3e78012.png)
+![install.png](https://i.loli.net/2019/09/11/Iu1eMzZDg6frw97.png)
 
-![admin-install.png](https://i.loli.net/2019/05/08/5cd2fcae89cae.png)
+![admin-login.png](https://i.loli.net/2019/09/11/3CahVJAvXngwiQu.png)
 
-![admin-login.png](https://i.loli.net/2019/05/08/5cd2fcae6a3fa.png)
+![admin-dashboard.png](https://i.loli.net/2019/09/11/G5R6bOweYoiZKEv.png)
 
-![admin-dashboard.png](https://i.loli.net/2019/05/08/5cd2fcaf1b2d2.png)
+![admin-posts.png](https://i.loli.net/2019/09/11/uMHSeIkmC4iPzfJ.png)
 
-![admin-posts.png](https://i.loli.net/2019/05/08/5cd2fcaf18c37.png)
+![admin-post-edit.png](https://i.loli.net/2019/09/11/ucDh2tOZLJGTyHX.png)
 
-![admin-write.png](https://i.loli.net/2019/05/08/5cd2fcae9bea2.png)
+![admin-post-publish.png](https://i.loli.net/2019/09/11/UwC3ecsRpAMONgq.png)
 
-![admin-write1.png](https://i.loli.net/2019/05/08/5cd2fcaf6a1ac.png)
+![admin-post-settings.png](https://i.loli.net/2019/09/11/bxmJ7OTirtvV4Gs.png)
 
-![admin-write2.png](https://i.loli.net/2019/05/08/5cd2fcb08ea2d.png)
+![admin-attachment.png](https://i.loli.net/2019/09/11/B5UlX6vAgZ3bzaJ.png)
 
-![admin-attachment.png](https://i.loli.net/2019/05/08/5cd2fcb1c752e.png)
+![admin-profile.png](https://i.loli.net/2019/09/11/mMageUXv5EDpfJQ.png)
 
-![admin-themes.png](https://i.loli.net/2019/05/08/5cd2fcb21fc76.png)
+![admin-themes.png](https://i.loli.net/2019/09/11/FVA953Ljswd4c8G.png)
 
-![admin-theme-settings.png](https://i.loli.net/2019/05/08/5cd2fcb04f9c3.png)
-
-![admin-profile.png](https://i.loli.net/2019/05/08/5cd2fccee89f5.png)
-
-![admin-options.png](https://i.loli.net/2019/05/08/5cd2fccedc309.png)
+![admin-options.png](https://i.loli.net/2019/09/11/TK6SeMdVj1xcrDw.png)
